@@ -50,7 +50,7 @@ def populate():
         title="Flask",
         url="http://flask.pocoo.org")
         
-    me_cat = add_cat('Nicholas Saunderson', views=128, likes=64)
+    me_cat = add_cat('Nicholas Saunderson', views=16, likes=8)
     
     add_page(cat=me_cat,
              title="GitHub Repository Link",
@@ -58,7 +58,7 @@ def populate():
             
     add_page(cat=me_cat,
              title="PythonAnywhere Link",
-             url="Site is down")
+             url="")
                                                                             
     # Print out what we have added to the user.
     for c in Category.objects.all():
