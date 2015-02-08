@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<body bgcolor="#81F781">
+{% extends 'base.html' %}
 
-{% load staticfiles %} <!-- New line -->
+{% load staticfiles %}
 
+{% block title %}{{ category_name }}{% endblock %}
 
-<!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>About</title>
-    </head>
-    
-    <body>
+{% block body_block %}
         <h1>Nicholas Saunderson</h1>
         2057559s <strong>{{ boldmessage }}</strong><br />
-        <a href="/rango"><button type="button">Rango</button></a><br />
+        
         <img src="{% static "images/self.jpg" %}" alt="Picture of Me" height="200" width="240" /> <!-- New line -->
-    </body>
-    
-</html>
+{% endblock %}
