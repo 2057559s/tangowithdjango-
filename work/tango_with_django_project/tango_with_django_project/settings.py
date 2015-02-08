@@ -110,4 +110,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Absolute path to the media direct
 
 
 
+LOGIN_URL = '/rango/login/'
+
+
+
 
