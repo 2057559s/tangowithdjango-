@@ -1,13 +1,17 @@
-{% extends 'rango/base.html' %}
+{% extends 'base.html' %}
 
 {% load staticfiles %}
 
-{% block title %}{{ category_name }}{% endblock %}
+{% block title %}About{% endblock %}
 
 {% block body_block %}
-        <h1>Nicholas Saunderson</h1>
-        2057559s <strong>{{ boldmessage }}</strong><br />
-        
-        <img src="{% static "images/self.jpg" %}" alt="Picture of Me" height="200" width="240" /> <!-- New line -->
-        <p> visits: {{ visits }}</p>
+<div class="page-header">
+    <h1>About</h1>
+</div>
+<div>
+    <p></strong>This is the about page</p>
+    <p></string>This is a picture of me</p>
+    <img  width="140" height="180" src="{% static "images/self.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+    <p>Number of visits to this site: {{ visits }}</p>
+</div>
 {% endblock %}
