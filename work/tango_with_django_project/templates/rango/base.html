@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<body bgcolor="#E6E6FA">
+
+<html>
+    <head>
+        <title>Rango - {% block title %}How to Tango with Django!{% endblock %}</title>
+    </head>
+    
+    <body>
+        <div>
+            {% block body_block %}{% endblock %}
+        </div>
+        
+        <hr />
+        
+        <div>
+            <ul>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'restricted' %}"><button type="button">Restricted</button></a><br></li>
+                <li><a href="{% url 'auth_logout' %}?next=/rango/"><button type="button">Logout</button></a><br></li>
+                <li><a href="{% url 'add_category' %}"><button type="button">Add a new Category</button></a><br></li>
+                {% else %}
+                <li><a href="{% url 'registration_register' %}"><button type="button">Register</button></a><br></li>
+                <li><a href="{% url 'auth_login' %}">Login</a></li>
+                
+                {% endif %}
+                <li><a href="{% url 'about' %}"><button type="button">About</button></a><br></li>
+                <li><a href="{% url 'index' %}"><button type="button">Homepage</button></a><br></li>
+                
+                
+                
+            </ul>
+        </div>
+    </body>
+</html>
