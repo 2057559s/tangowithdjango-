@@ -25,8 +25,12 @@
             </div>
         </div>
             {% for category in categories %}
-            <li><a href="{% url 'category'  category.slug %}">{{ category.name }}</a></li>
+            <div class="list-group-item">
+                <h class="list-group-item-heading"><a href="{% url 'category'  category.slug %}">{{ category.name }}</a></h>
+            </div>
             {% endfor %}
+
+
             
         </ul>
         {% else %}
@@ -45,8 +49,11 @@
         </div>
         <ul>
             {% for page in pages %}
-            <li><a href="{{page.url}}">{{ page.title }}</a></li>
+            <div class="list-group-item">
+                <h class="list-group-item-heading"><a href="{{page.url}}">{{ page.title }}</a></h>
+            </div>
             {% endfor %}
+            
         </ul>
         {% else %}
         <strong>There are no categories present.</strong>
