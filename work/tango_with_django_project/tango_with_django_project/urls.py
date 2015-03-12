@@ -14,6 +14,7 @@ class MyRegistrationView(RegistrationView):
 
 
 urlpatterns = patterns('',
+                       url(r'^$', include('rango.urls')),
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^rango/', include('rango.urls')),
                        #Add in this url pattern to override the default pattern in accounts.
